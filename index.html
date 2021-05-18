@@ -12,9 +12,14 @@
     </heda>
     <body>
         <div id="wrapper">
-            <button onclick="printMassage('print', testString)">Show testString</button>
-            <button onclick="cipher (testString, 1, 'massage')">Show encryption result</button>
-            <div id="print"></div>
+            <button onclick="cipher (getText(), getShift(), 'massage')">Show coded text</button>
+            <div><input type="text" id="inputText"></div>
+            <div><label><input type="range" id="inputShift" min="-5" max="5" value="0">Przesunięcie</label></div>
+            <fieldset>
+                <legend>Wybór alfabetu (zestawu znaków)</legend>
+                <div><label><input type="radio" name="alphabet" checked> znaki łacińskie</label></div>
+                <div><label><input type="radio" name="alphabet"> znaki polskie</label></div>
+            </fieldset>
             <div id="massage"></div>
         </div>
         <script src="caesarCipher.js"></script>
