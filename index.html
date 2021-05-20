@@ -12,14 +12,14 @@
     </heda>
     <body>
         <div id="wrapper">
+            <div><label>What do you want to hide? <input type="text" id="inputText"></label></div>
+            <div><label>Set shift level <input type="range" id="inputShift" min="-5" max="5" value="0"></label></div>
             <button onclick="cipherString (getText(), getShift(), 'massage')">Show coded text</button>
-            <div><input type="text" id="inputText"></div>
-            <div><label><input type="range" id="inputShift" min="-5" max="5" value="0">Przesunięcie</label></div>
-            <fieldset>
+            <!-- <fieldset>
                 <legend>Wybór alfabetu (zestawu znaków)</legend>
                 <div><label><input type="radio" name="alphabet" checked> znaki łacińskie</label></div>
                 <div><label><input type="radio" name="alphabet"> znaki polskie</label></div>
-            </fieldset>
+            </fieldset> -->
             <div id="massage"></div>
         </div>
         <script src="caesarCipher.js"></script>
