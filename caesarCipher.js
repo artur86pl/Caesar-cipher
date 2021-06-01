@@ -134,10 +134,10 @@ function findKey (string, stat, alphabet)
 
 
 
-function cipherAlphabet (string, stat, alphabet, wherePrint) 
+function cipherAlphabet (string, keyFunction, stat, alphabet, wherePrint) 
 {
     const alphabetUpper = alphabet.map(letter => letter.toUpperCase());
-    const key = findKey (string, stat, alphabet);
+    const key = keyFunction (string, stat, alphabet);
     const isLetterLow = (letter, key) => alphabet.includes(alphabet[alphabet.indexOf(letter) + key]);
     const isLetterUpp = (letter, key) => alphabetUpper.includes(alphabetUpper[alphabetUpper.indexOf(letter) + key]);
 

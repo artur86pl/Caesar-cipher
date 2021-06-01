@@ -15,7 +15,8 @@
             <div><label>What do you want to hide? <input type="text" id="inputText"></label></div>
             <div><label>Set shift level <input type="range" id="inputShift" min="-3" max="3" value="0"></label></div>
             <button onclick="cipherAsci(getText(), getShift(), 'massage')">Show coded text (for English)</button>
-            <button onclick="cipherAlphabet(getText(), statPl, alphabetPl,'massage')">Decode for Polish sign (ą,ę,ś,ć,ż)</button>
+            <button onclick="cipherAlphabet(getText(), getShift, statPl, alphabetPl,'massage')">Code for Polish signs (ą,ę,ś,ć,ż)</button>
+            <button onclick="cipherAlphabet(getText(), findKey, statPl, alphabetPl,'massage')">Decode for Polish signs (ą,ę,ś,ć,ż)</button>
             <div id="massage"></div>
         </div>
         <script src="caesarCipher.js"></script>
